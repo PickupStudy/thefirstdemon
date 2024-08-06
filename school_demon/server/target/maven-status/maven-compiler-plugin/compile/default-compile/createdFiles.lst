@@ -1,0 +1,14 @@
+com\school\mapper\AdminMapper.class
+com\school\mapper\PaperMapper.class
+org\springframework\boot\context\properties\ConfigurationBeanFactoryMetadata.class
+com\school\service\PaperService.class
+com\school\service\impl\AdminServiceImpl.class
+com\school\service\UserService.class
+com\school\controller\UserController.class
+com\school\controller\PaperController.class
+com\school\service\impl\UserServiceImpl.class
+com\school\ServerApplication.class
+com\school\service\AdminService.class
+com\school\controller\AdminController.class
+com\school\mapper\UserMapper.class
+com\school\service\impl\PaperServiceImpl.class

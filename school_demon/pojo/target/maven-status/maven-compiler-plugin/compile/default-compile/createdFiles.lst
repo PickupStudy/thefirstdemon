@@ -1,0 +1,10 @@
+com\school\entity\User.class
+com\school\dto\PaperDTO.class
+com\school\entity\Paper.class
+com\school\entity\Admin$AdminBuilder.class
+com\school\entity\Paper$PaperBuilder.class
+com\school\vo\UserVO.class
+com\school\entity\User$UserBuilder.class
+com\school\vo\PaperVO.class
+com\school\dto\UserDTO.class
+com\school\entity\Admin.class

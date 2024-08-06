@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.mapper.UserMapper">
+
+    <insert id="register" useGeneratedKeys="false" >
+        insert into school_demon.user (userId, userPassword, userLove, userFans, userStatus,userPaper)
+        values (#{userId}, #{userPassword}, #{userLove}, #{userFans}, #{userStatus},#{userPaper})
+    </insert>
+
+
+    <select id="seeInformation">
+        select * from school_demon.user where userId=#{userId}
+    </select>
+
+
+</mapper>

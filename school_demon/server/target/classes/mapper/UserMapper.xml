@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.school.mapper.UserMapper">
+
+    <insert id="register" useGeneratedKeys="false" >
+        insert into school_demon.user (userId, userPassword, userLove, userFans, userStatus)
+        values (#{userId}, #{userPassword}, #{userLove}, #{userFans}, #{userStatus})
+    </insert>
+
+
+
+</mapper>

@@ -1,0 +1,66 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${school.datasource.driver-class-name}
+      url: jdbc:mysql://${school.datasource.host}:${school.datasource.port}/${school.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${school.datasource.username}
+      password: ${school.datasource.password}
+#  redis:
+#    host: ${school.redis.host}
+#    port: ${school.redis.port}
+#    password: ${school.redis.password}
+#    database: ${school.redis.database}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.school.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      school:
+        mapper: debug
+        service: info
+        controller: info
+
+school:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${school.alioss.endpoint}
+    access-key-id: ${school.alioss.access-key-id}
+    access-key-secret: ${school.alioss.access-key-secret}
+    bucket-name: ${school.alioss.bucket-name}
+  wechat:
+    appid: ${school.wechat.appid}
+    secret: ${school.wechat.secret}
+    mchid : ${school.wechat.mchid}
+    mchSerialNo: ${school.wechat.mchSerialNo}
+    privateKeyFilePath: ${school.wechat.privateKeyFilePath}
+    apiV3Key: ${school.wechat.apiV3Key}
+    weChatPayCertFilePath: ${school.wechat.weChatPayCertFilePath}
+    notifyUrl: ${school.wechat.notifyUrl}
+    refundNotifyUrl: ${school.wechat.refundNotifyUrl}
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: your-ak
